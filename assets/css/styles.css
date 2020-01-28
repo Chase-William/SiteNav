@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* This font style is from microsoft's documentation pages <I love text style> */
+    font-family: 'Segoe UI','SegoeUI','S','Helvetica Neue','Helvetica','Tahoma,Arial','sans-serif';
+    font-weight: 400;
+    text-rendering: optimizeLegibility; 
+    background: #181a1c;
+    color: white;
+    width: 75%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+/* Keeps ALL dropdowns closed by default - same logic applies to desktop media query */
+.first-level-dropdown {
+    display: none;
+}
+.main-dropdown li > a {
+    display: block;
+}
+nav { /* Controls the width of the nav within the main-container */
+    float: left;  
+    margin-right: 5%; 
+    height: auto;   
+} 
+.main-dropdown > a {
+    padding: 15px;
+    display: block;
+}
+.nav-header { /* header for the navigation (Assignments) */
+    font-size: x-large;
+}
+.main-nav-container { /* the main-nav-container will fill the nav */
+    width: 100%;
+    padding: 10px;
+}
+.first-level-dropdown a {
+    padding: 10px;
+    display: block;     
+}
+.first-level-dropdown > li a:hover { text-decoration: underline; }
+a { /* setting all anchors to none styles by default */
+    padding-left: 5%;
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+}
+nav ul { /* Main navigation styles */
+    list-style: none;  
+    padding-left: 10px;                   
+    background: #26282c;    
+}
