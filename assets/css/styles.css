@@ -1,3 +1,13 @@
+/*
+    Navigation Structure:
+
+        - tree                    = The main ul that contains the entire navigation
+        - tree-item               = An li that will be used as a clickable span to expand the navigation
+        - tree-group              = A ul that is used to categorize the nav tree
+        - tree-expander           = A span that is used to expand a new tree-group nested within it (usually inside a tree-item)
+        - tree-expander-indicator = The arrow that turns when the tree group for that tree item is being displayed
+        - tree-leaf               = A anchor tag that will take the user to a new location
+*/
 * {
     margin: 0;
     padding: 0;
@@ -13,42 +23,71 @@ body {
     margin: 0 auto;
     max-width: 1000px;
 }
-/* Keeps ALL dropdowns closed by default - same logic applies to desktop media query */
-.first-level-dropdown {
-    display: none;
-}
-.main-dropdown li > a {
-    display: block;
-}
-nav { /* Controls the width of the nav within the main-container */
+nav 
+{   /* Controls the width of the nav within the main-container */
     float: left;  
     margin-right: 5%; 
     height: auto;   
 } 
-.main-dropdown > a {
-    padding: 15px;
-    display: block;
+nav ul 
+{   /* General styles for all ul within the nav */
+    list-style: none;                     
+    background: #26282c;    
 }
-.nav-header { /* header for the navigation (Assignments) */
+ul.tree-group 
+{   /* Keeps ALL dropdowns closed by default - same logic applies to desktop media query */
+    display: none;
+}
+span.tree-expander { 
+    /* Styles for the block that are used to expand to reveal nested tree-items or other expanders */
+    display: block;
+    padding: 10px 10px 10px 3px;
+    font-size: medium;
+    height: auto;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+}
+span.tree-expander-indicator 
+{   /* Default arrow styles (default look) */
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 2px;
+    margin-bottom: 1.5px;
+    margin-right: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);    
+    transition-duration: 0.5s;
+}   
+span.tree-expander-indicator.active 
+{   /* Active arrow styles (has been clicked) */
+    transform: rotate(45deg);
+}
+ul.tree-group li a 
+{
+    display: block;
+    padding: 5px;
+    margin-left: 15px;
+    font-size: medium;
+    text-decoration: none;        
+    color: white;
+}
+ul.tree-group li a:hover
+{
+    text-decoration: underline; 
+}
+.nav-header 
+{   /* header for the navigation (Assignments) */
     font-size: x-large;
 }
-.main-nav-container { /* the main-nav-container will fill the nav */
+ul.tree 
+{   /* Defining the main tree navigation */
     width: 100%;
-    padding: 10px;
-}
-.first-level-dropdown a {
-    padding: 10px;
-    display: block;     
-}
-.first-level-dropdown > li a:hover { text-decoration: underline; }
-a { /* setting all anchors to none styles by default */
-    padding-left: 5%;
-    list-style-type: none;
-    color: white;
-    text-decoration: none;
-}
-nav ul { /* Main navigation styles */
-    list-style: none;  
-    padding-left: 10px;                   
-    background: #26282c;    
+    padding: 4px;
 }

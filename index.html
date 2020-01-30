@@ -6,35 +6,42 @@
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="assets/js/jquery-3.4.1.js"></script>  <!-- loads the required JQuert Script -->
-        <script src="assets/js/dropdown.js"></script>      <!-- dropdown functionality -->
+        <script src="assets/js/nav-tree.js"></script>      <!-- dropdown functionality -->
 	</head>
 			<!-- Main Navigation -->
             <nav>
-                <ul class="main-nav-container" id="topnav">
+                <ul class="tree">
                     <!-- Header bar that displays the theme of the navigation -->
-                    <li><span class="nav-header">Assignments</span></li>
+                    <div><span class="nav-header">Header</span></div>
 
                     <!-- Exercises Container -->
-                    <li class="main-dropdown">
-                        <a href="#">Projects</a>
+                    <li class="tree-item">
+                        
+                        <span class="tree-expander">
+                            <span class="tree-expander-indicator"></span>
+                            Some Topics
+                        </span>
                             <!-- Sub elements of the main dropdowns -->
-                        <ul class="first-level-dropdown" id="projects">
-                            <li><a href="#">Mid Term Project</a></li>
+                        <ul class="tree-group">
+                            <li><a href="#">Subject</a></li>
                         </ul>
                     </li>
 
                     <!-- Exercises Container -->
-                    <li class="main-dropdown">
-                        <a href="#">Exercises</a>
+                    <li class="tree-item">
+                        <span class="tree-expander">
+                            <span class="tree-expander-indicator"></span>
+                            Other Topics
+                        </span>
                         <!-- Sub elements of the main dropdowns -->
-                        <ul class="first-level-dropdown" id="exercises">
-                            <li><a href="#">01</a></li>
-                            <li><a href="#">02</a></li>
-                            <li><a href="#">03</a></li>
-                            <li><a href="#">04</a></li>
-                            <li><a href="#">05</a></li>
-                            <li><a href="#">06</a></li>
-                            <li><a href="#">07</a></li>
+                        <ul class="tree-group">
+                            <li><a href="#">Subject</a></li>
+                            <li><a href="#">Subject</a></li>
+                            <li><a href="#">Subject</a></li>
+                            <li><a href="#">Subject</a></li>
+                            <li><a href="#">Subject</a></li>
+                            <li><a href="#">Subject</a></li>
+                            <li><a href="#">Subject</a></li>
                         </ul>
                     </li>
                 </ul>  
